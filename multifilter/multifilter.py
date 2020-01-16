@@ -1,7 +1,8 @@
 class MultiFilter:
 
     def judge_half(self, pos, neg):
-	# допускает элемент, если его допускает хотя бы половина фукнций (pos >= neg)
+	
+	"""допускает элемент, если его допускает хотя бы половина фукнций (pos >= neg)"""
 
         if self.pos >= self.neg:
             return True
@@ -9,7 +10,8 @@ class MultiFilter:
             return False
 
     def judge_any(self, pos, neg):
-	# допускает элемент, если его допускает хотя бы одна функция (pos >= 1)
+		
+	"""допускает элемент, если его допускает хотя бы одна функция (pos >= 1)"""
 
         if self.pos >= 1:
             return True
@@ -17,7 +19,9 @@ class MultiFilter:
             return False
 
     def judge_all(self, pos, neg):
-	# допускает элемент, если его допускают все функции (neg == 0)
+		
+	"""допускает элемент, если его допускают все функции (neg == 0)"""
+	
         if self.neg == 0:
             return True
         else:
